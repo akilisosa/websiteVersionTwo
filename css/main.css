@@ -11,6 +11,7 @@ h1 {
     color:white;
     margin: auto;
     text-align: center;
+    word-wrap: break-word;
 }
 
 #backgroundGif{
@@ -27,6 +28,15 @@ h1 {
 
 }
 
+#gear{
+    position: absolute;
+    top: 20vw;
+    right: 30vw;
+    width: 5vw;
+    height: 5vw;
+    border: 3px solid #73AD21;
+}
+
 
 
 
@@ -36,3 +46,10 @@ margin:auto;
 width: 100%;
 height: auto;
 }
+
+
+@media screen and (max-width: 600px) {
+    body {
+      background-color: olive;
+    }
+  }
