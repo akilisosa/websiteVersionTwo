@@ -35,7 +35,22 @@ h1 {
     width: 5vw;
     height: 5vw;
     border: 3px solid #73AD21;
+    opacity: 0;
 }
+
+#gear:hover{
+
+    animation-name: appear;
+    animation-duration: 3s;
+    
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes appear {
+    
+    100% {opacity: 1;}
+  }
 
 
 

@@ -1,3 +1,5 @@
+
+
 h1 {
   
     text-align: center;
@@ -13,6 +15,10 @@ h2 {
 h3 {
     text-align: center;
 
+}
+
+#phoneScreen{
+    display:none;
 }
 
 form {
@@ -34,3 +40,28 @@ body {
     margin: auto;
     text-align: center;
 }
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 800px) {
+
+    h1{
+        background-color:green;
+    }
+
+    #phoneScreen{
+        display: block;
+        text-align:center;
+        font-size:10vw;
+        margin:auto;
+        color: white;
+        background-color: black;
+    }
+
+    #formStuff{
+        display:none;
+    }
+
+
+} 
