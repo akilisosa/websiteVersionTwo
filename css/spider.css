@@ -8,12 +8,29 @@ h2 {
     position:relative;
     text-align: center;
 }
+  
 
-.theQueryClass{
-    position:relative;
-    text-align:center;
+h3 {
+    text-align: center;
+
 }
 
-.theWholeThing{
-    margin:auto;
+form {
+    text-align: center;
+
+}
+
+#searchterm {
+    
+
+   text-align: center;
+   width: 6em;
+   margin-right: 1em;
+   margin-top: 0.4em;
+
+}
+
+body {
+    margin: auto;
+    text-align: center;
 }
