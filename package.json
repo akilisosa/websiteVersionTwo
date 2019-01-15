@@ -1,0 +1,29 @@
+{
+  "name": "thewebsite",
+  "version": "2.0.1",
+  "description": "the sosa animation studios website",
+  "main": "1",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "bootstrap3": "^3.3.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akilisosa/websiteVersionTwo.git"
+  },
+  "keywords": [
+    "svg",
+    "json",
+    "bootstrap"
+  ],
+  "author": "akili sosa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akilisosa/websiteVersionTwo/issues"
+  },
+  "homepage": "https://github.com/akilisosa/websiteVersionTwo#readme"
+}
