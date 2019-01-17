@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head></head>
+
+<body>
+
+        <svg xmlns="http://www.w3.org/2000/svg" xml:lang="en" width="200" height="200" viewBox="-100 -100 200 200" style="background-color: lightGreen">
+           
+                <title>Hover Effects that Don't Affect Hover Regions</title>
+                <style>
+                    circle { 
+                        fill: currentColor; 
+                        stroke: currentColor;
+                        stroke-width: 0px;
+                        pointer-events: visibleFill;
+                        transition: all 0.5s;
+                    }
+                    circle:hover { 
+                        stroke-width: 24px;
+                        fill-opacity: 0.3; 
+                        animation-name: allgood2;
+                        animation-duration: 4s;
+                        animation-iteration-count: infinite;
+                        animation-fill-mode: forwards;
+                    }
+                    @keyframes allgood2{
+                    
+                        0%{
+                            fill:#009867;
+                            stroke:#92d669;
+                        }
+
+                        50%{
+                            fill:#008955;
+                            stroke: #ffee8a;
+                        
+                        }
+                </style>
+                <circle color="crimson" cx="75" cy="75" r="60"/>
+                <circle color="springGreen" cx="200" cy="125" r="60"/>
+                <circle color="royalBlue" cx="325" cy="75" r="60"/>
+            </svg>
+           
+
+
+</body>
+
+
+</html>

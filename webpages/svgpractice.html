@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<head></head>
+
+<body>
+
+        <svg xmlns="http://www.w3.org/2000/svg" xml:lang="en" width="200" height="200" viewBox="-100 -100 200 200" style="background-color: lightGreen">
+            <title>Stroking Shapes</title>
+            <style>
+
+                    circle {
+                        pointer-events: visibleFill;
+                        transition: all 4s;
+                        animation-name: warning;
+                        animation-duration: 2s;
+                        animation-iteration-count: infinite;
+                        animation-fill-mode: backwards;
+                        
+                    }
+    
+                    @keyframes warning{
+                        50%{
+
+                            fill:crimson;
+                            stroke:#a76d16;
+                        }
+    
+                    }
+                    circle:hover { 
+                        animation-name: allgood;
+                        animation-duration: 8s;
+                        animation-iteration-count: infinite;
+                        animation-fill-mode: forwards;
+                    }
+    
+                        @keyframes allgood{
+                        
+                           
+    
+                            50%{
+                                fill:#ce8950;
+                                stroke:#46bda3;
+                            
+                            }
+                        
+                      }
+
+
+                      
+                polygon {
+                    pointer-events: visibleFill;
+                        transition: all;
+                    animation-name: warning2;
+                    animation-duration: 4s;
+                    animation-iteration-count: infinite;
+                   
+                }
+
+                @keyframes warning2{
+                    50%{
+                        fill:#802680;
+                        stroke:#db6f31;
+                    }
+
+                }
+
+                polygon:hover { 
+                    animation-name: allgood2;
+                    animation-duration: 8s;
+                    animation-iteration-count: infinite;
+                    animation-fill-mode: forwards;
+                }
+
+                    @keyframes allgood2{
+                    
+                        
+
+                        50%{
+                            fill:#44ecac;
+                            stroke: #ffee8a;
+                        
+                        }
+                    
+                  }
+
+
+                  rect {
+                    pointer-events: visibleFill;
+                        transition: all;
+                    animation-name: warning3;
+                    animation-duration: 4s;
+                    animation-iteration-count: infinite;
+                   
+                }
+
+                @keyframes warning3{
+                    50%{
+                        fill:#2384d3;
+                        stroke:#940000;
+                    }
+
+                }
+
+                rect:hover { 
+                    animation-name: allgood3;
+                    animation-duration: 8s;
+                    animation-iteration-count: infinite;
+                    animation-fill-mode: forwards;
+                }
+
+                    @keyframes allgood3{
+                    
+                        
+
+                        50%{
+                            fill:#b64ef3;
+                            stroke: #5ad7f7;
+                        
+                        }
+                    
+                  }
+            
+
+            </style>
+            <rect class="animated2" x="-50%" y="-50%" height="100%" width="100%" fill="#940000"></rect>
+            <polygon class="animated" points="-98,0 0,-98 98,0 0,98" fill="#c62828" stroke="#c30101" stroke-width="2"/>
+            <circle class="animated2" r="1.2cm" fill="#940000" stroke="#d32f2f" stroke-width="1cm" stroke-opacity="0.5"/>
+        </svg>
+           
+
+
+</body>
+
+
+</html>

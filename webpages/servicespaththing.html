@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<head></head>
+
+<body>
+
+
+    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" 
+    preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+    
+
+        <title>Motion on a Path, with &lt;animateMotion&gt;</title>
+        <defs>
+            <polygon id="bead" points="-8,0 0,-8 8,0 0,8" stroke-width="2"/>                       <!--1-->
+            <!--The objects that we're going to move along the path will be <use> copies of a predefined <polygon> "beads"
+                The polygon is a square centered on teh origin and rotated 
+                so that the corners of the square are positioned on the x and y axes-->
+        </defs> 
+
+        
+        <rect x="0" y="0" width="100%" height="100%" fill="#ed5a6d"></rect>
+        <rect x="0" y="0" width="100%" height="38%" fill="#74000b">
+                <animate attributeType="XML" attributeName="y" from="-38%" to="138%"
+                    dur="8s" repeatCount="indefinite" />
+        </rect>
+
+        <path id="track" d="M70 110 
+                    c 0 100, 150 100, 150 0
+
+                    s -150 -100,  -150 0 z" stroke="" fill="transparent"/>
+                <!--2-->
+
+            <!--The path (which we'll move the bead along) consists of two
+            teardrop-shaped cubic bezier curve segments on either side of the 
+            center point. The result is a sideways figure 8, otherwise known as an
+            infinity symbol. The path is drawn visibily in the SVG, with a thin gray stroke.
+            -->
+
+    
+            <circle cx="0" cy="0" r="40" stroke="#035b96" stroke-width="3" fill="#04396c">
+                
+            <animateMotion dur="5s" repeatDur="indefinite" rotate="auto">                      <!--3-->
+                <!--Each <circle> contains... i didn't use <use> copy of the bead contains an <animateMotion> element that defines a 5-second animation that loops indefinitley. 
+                    By default the animation duration will be the same time it takes to coplete a full loop 
+                of the path. The rotate attribute tells our beads to rotate to match the path.-->
+
+                <mpath xlink:href="#track"/>                   <!--4-->
+                    <!--The path element is referenced from the <mpath> elment within the <animateMotion>-->
+
+            </animateMotion>
+          
+                    <animate attributeType="XML" attributeName="r"             
+                    from="5" to="20" to
+                        dur="6s" repeatCount="indefinite" />   
+
+                </circle>
+        
+                <circle cx="0" cy="0" r="20" stroke="#04396c" stroke-width="3" fill="#035b96">
+            <animateMotion dur="5s" repeatDur="indefinite" rotate="auto" begin="-1s">          <!--5-->
+                <!--the subsequent beads are similar, except for different colors on the <use>,
+                    and a different begin value on the animation element. just like with css animations, 
+                    negative start times can be used to start an animatoin partway through its cycle.-->
+                <mpath xlink:href="#track"/>
+            </animateMotion>
+
+            <animate attributeType="XML" attributeName="r"             
+            from="5" to="20" to
+                dur="6s" repeatCount="indefinite" begin="-1s"/>
+        </circle>
+
+
+
+        <circle cx="0" cy="0" r="20" stroke="#035b96" stroke-width="3" fill="#04396c">
+                <animateMotion dur="5s" repeatDur="indefinite" rotate="auto" begin="-2s">       
+                    <mpath xlink:href="#track"/>
+                </animateMotion>
+    
+                <animate attributeType="XML" attributeName="r"             
+                from="5" to="20" to
+                    dur="6s" repeatCount="indefinite" begin="-2s"/>
+            </circle>
+
+            <rect x="0" y="0" width="100%" height="38%" fill="#74000b">
+                    <animate attributeType="XML" attributeName="y" from="-38%" to="138%"
+                        dur="8s" repeatCount="indefinite" begin="-4s"/>
+            </rect>
+
+
+       <circle cx="0" cy="0" r="20" stroke="#04396c" stroke-width="3" fill="#035b96">
+                <animateMotion dur="5s" repeatDur="indefinite" rotate="auto" begin="-3s">       
+                    <mpath xlink:href="#track"/>
+                </animateMotion>
+    
+                <animate attributeType="XML" attributeName="r"             
+                from="5" to="20" to
+                    dur="6s" repeatCount="indefinite" begin="-3s"/>
+            </circle>
+
+            
+
+            <circle cx="0" cy="0" r="20" stroke="#035b96" stroke-width="3" fill="#04396c">
+                    <animateMotion dur="5s" repeatDur="indefinite" rotate="auto" begin="-4s">       
+                        <mpath xlink:href="#track"/>
+                    </animateMotion>
+        
+                    <animate attributeType="XML" attributeName="r"             
+                    from="5" to="20" to
+                        dur="6s" repeatCount="indefinite" begin="-4s"/>
+                </circle>
+
+                <text x="50%" y="52%" id="services" fill="#ed5a6d" font-size="2em" font-family="fantasy" role="heading"><a xlink:href="/animationportfolio.html">Services!</a></text>
+    </svg>
+
+
+           
+
+
+</body>
+
+
+</html>

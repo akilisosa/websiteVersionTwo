@@ -1,37 +1,510 @@
-<!DOCTYPE html>
-<head>
-    <!--this is the little part that goes in the top tab-->
-    <title>Sosa Animation Studios</title>
-     
-    <!-- this links the stylesheet to the page to tell it what do -->
-    <link rel="stylesheet" type="text/css" href="../css/spaceship.css">
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Album example · Bootstrap</title>
 
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  
 
-</head>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+      }
 
-<body>
-        <div class="theWholeThing">
-    <!--header 1-->
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="album.css" rel="stylesheet">
+    <style>
     
-    <div class="title">
+    :root {
+  --jumbotron-padding-y: 3rem;
+}
+
+.jumbotron {
+  padding-top: var(--jumbotron-padding-y);
+  padding-bottom: var(--jumbotron-padding-y);
+  margin-bottom: 0;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: calc(var(--jumbotron-padding-y) * 2);
+    padding-bottom: calc(var(--jumbotron-padding-y) * 2);
+  }
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+
+    </style>
+  </head>
+
+
+  <body>
+    <header>
+  <div class="collapse bg-dark" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">About</h4>
+          <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+          <h4 class="text-white">Contact</h4>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Follow on Twitter</a></li>
+            <li><a href="#" class="text-white">Like on Facebook</a></li>
+            <li><a href="#" class="text-white">Email me</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container d-flex justify-content-between">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2" focusable="false" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+        <strong>Sosa Studios</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">Sosa Animation Studios</h1>
+      <p class="lead text-muted">This was as simple as I could make it. I hope you find what you are looking for.</p>
+      <p>
+        <a href="#" class="btn btn-primary my-2">Contact?</a>
+        <a href="#" class="btn btn-secondary my-2">Donate?</a>
+      </p>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm bg-light">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" 
+            preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
             
-    <h1>Sosa Animation Studios</h1>
-    <hr>
-     </div>
+            <title>Get a Quote today!</title>
+            <defs>
+                <polygon id="bead" points="-8,0 0,-8 8,0 0,8" stroke-width="2"/>                       <!--1-->
+                <!--The objects that we're going to move along the path will be <use> copies of a predefined <polygon> "beads"
+                    The polygon is a square centered on teh origin and rotated 
+                    so that the corners of the square are positioned on the x and y axes-->
+            </defs> 
+    
+            
+            <rect x="0" y="0" width="100%" height="100%" fill="#ed5a6d"></rect>
+            <rect x="0" y="0" width="100%" height="38%" fill="#74000b">
+                    <animate attributeType="XML" attributeName="y" from="-38%" to="138%"
+                        dur="8s" repeatCount="indefinite" />
+            </rect>
+    
+            <path id="track" d="M70 110 
+                        c 0 100, 150 100, 150 0
+    
+                        s -150 -100,  -150 0 z" stroke="" fill="transparent"/>
+                    <!--2-->
+    
+                <!--The path (which we'll move the bead along) consists of two
+                teardrop-shaped cubic bezier curve segments on either side of the 
+                center point. The result is a sideways figure 8, otherwise known as an
+                infinity symbol. The path is drawn visibily in the SVG, with a thin gray stroke.
+                -->
+    
+        
+                <circle cx="0" cy="0" r="40" stroke="#035b96" stroke-width="3" fill="#04396c">
+                    
+                <animateMotion dur="5s" repeatDur="indefinite" rotate="auto">                      <!--3-->
+                    <!--Each <circle> contains... i didn't use <use> copy of the bead contains an <animateMotion> element that defines a 5-second animation that loops indefinitley. 
+                        By default the animation duration will be the same time it takes to coplete a full loop 
+                    of the path. The rotate attribute tells our beads to rotate to match the path.-->
+    
+                    <mpath xlink:href="#track"/>                   <!--4-->
+                        <!--The path element is referenced from the <mpath> elment within the <animateMotion>-->
+    
+                </animateMotion>
+              
+                        <animate attributeType="XML" attributeName="r"             
+                        from="5" to="20" to
+                            dur="6s" repeatCount="indefinite" />   
+    
+                    </circle>
+            
+                    <circle cx="0" cy="0" r="20" stroke="#04396c" stroke-width="3" fill="#035b96">
+                <animateMotion dur="5s" repeatDur="indefinite" rotate="auto" begin="-1s">          <!--5-->
+                    <!--the subsequent beads are similar, except for different colors on the <use>,
+                        and a different begin value on the animation element. just like with css animations, 
+                        negative start times can be used to start an animatoin partway through its cycle.-->
+                    <mpath xlink:href="#track"/>
+                </animateMotion>
+    
+                <animate attributeType="XML" attributeName="r"             
+                from="5" to="20" to
+                    dur="6s" repeatCount="indefinite" begin="-1s"/>
+            </circle>
+    
+    
+    
+            <circle cx="0" cy="0" r="20" stroke="#035b96" stroke-width="3" fill="#04396c">
+                    <animateMotion dur="5s" repeatDur="indefinite" rotate="auto" begin="-2s">       
+                        <mpath xlink:href="#track"/>
+                    </animateMotion>
+        
+                    <animate attributeType="XML" attributeName="r"             
+                    from="5" to="20" to
+                        dur="6s" repeatCount="indefinite" begin="-2s"/>
+                </circle>
+    
+                <rect x="0" y="0" width="100%" height="38%" fill="#74000b">
+                        <animate attributeType="XML" attributeName="y" from="-38%" to="138%"
+                            dur="8s" repeatCount="indefinite" begin="-4s"/>
+                </rect>
+                <text x="50%" y="52%" id="services" text-anchor="middle" fill="#ed5a6d" font-size="1.5em" font-family="fantasy" role="heading"><a xlink:href="/animationportfolio.html">Services!</a></text>
+       
+    
+           <circle cx="0" cy="0" r="20" stroke="#04396c" stroke-width="3" fill="#035b96">
+                    <animateMotion dur="5s" repeatDur="indefinite" rotate="auto" begin="-3s">       
+                        <mpath xlink:href="#track"/>
+                    </animateMotion>
+        
+                    <animate attributeType="XML" attributeName="r"             
+                    from="5" to="20" to
+                        dur="6s" repeatCount="indefinite" begin="-3s"/>
+                </circle>
+    
+                
+    
+                <circle cx="0" cy="0" r="20" stroke="#035b96" stroke-width="3" fill="#04396c">
+                        <animateMotion dur="5s" repeatDur="indefinite" rotate="auto" begin="-4s">       
+                            <mpath xlink:href="#track"/>
+                        </animateMotion>
+            
+                        <animate attributeType="XML" attributeName="r"             
+                        from="5" to="20" to
+                            dur="6s" repeatCount="indefinite" begin="-4s"/>
+                    </circle>
+    
+         </svg>
+            
+            
+            <div class="card-body">
+              <p class="card-text">Want to work with us? We want to work with you! These are just some the services we offer at Sosa Studios!</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <a href="/webpages/space/Services.html" class="btn btn-outline-secondary">View</a>
+                  <!--<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" viewBox="-100 -112.5 200 225" xmlns="http://www.w3.org/2000/svg" 
+            preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+
+           
+            <title>Stroking Shapes</title>
+            <style>
+
+                    circle.animated2 {
+                        pointer-events: visibleFill;
+                        transition: all 4s;
+                        animation-name: warning;
+                        animation-duration: 2s;
+                        animation-iteration-count: infinite;
+                        animation-fill-mode: backwards;
+                        
+                    }
+    
+                    @keyframes warning{
+                        50%{
+
+                            fill:crimson;
+                            stroke:#a76d16;
+                        }
+    
+                    }
+                    circle:hover.animated2 { 
+                        animation-name: allgood;
+                        animation-duration: 8s;
+                        animation-iteration-count: infinite;
+                        animation-fill-mode: forwards;
+                    }
+    
+                        @keyframes allgood{
+                        
+                           
+    
+                            50%{
+                                fill:#ce8950;
+                                stroke:#46bda3;
+                            
+                            }
+                        
+                      }
 
 
-     <div class="middlepart">
-    <p>the coolest animation studio on the planet</p>
-    <hr>
-    <ul>
-        <li><a href="space/tributepage.html">Tribute to Tao</a></li>
-        <li><a href="space/submitpage1.html">got a message to relay?</a></li>
-        <li><a href="space/Services.html">Services</a></li>
-    </ul>
-     </div>
+                      
+                polygon.animated {
+                    pointer-events: visibleFill;
+                        transition: all;
+                    animation-name: warning2;
+                    animation-duration: 4s;
+                    animation-iteration-count: infinite;
+                   
+                }
 
-     <div class="bottom">
-    <footer><strong>email: akili@sosaanimationstudios.com</strong></footer>
+                @keyframes warning2{
+                    50%{
+                        fill:#802680;
+                        stroke:#db6f31;
+                    }
+
+                }
+
+                polygon:hover.animated { 
+                    animation-name: allgood2;
+                    animation-duration: 8s;
+                    animation-iteration-count: infinite;
+                    animation-fill-mode: forwards;
+                }
+
+                    @keyframes allgood2{
+                    
+                        
+
+                        50%{
+                            fill:#44ecac;
+                            stroke: #ffee8a;
+                        
+                        }
+                    
+                  }
+
+
+                  
+                   rect.animated2 {
+                    pointer-events: visibleFill;
+                        transition: all;
+                    animation-name: warning3;
+                    animation-duration: 4s;
+                    animation-iteration-count: infinite;
+                   
+                }
+
+                @keyframes warning3{
+                    50%{
+                        fill:#2384d3;
+                        stroke:#940000;
+                    }
+
+                }
+
+                 rect:hover.animated2 { 
+                    animation-name: allgood3;
+                    animation-duration: 8s;
+                    animation-iteration-count: infinite;
+                    animation-fill-mode: forwards;
+                }
+
+                    @keyframes allgood3{
+                    
+                        
+
+                        50%{
+                            fill:#b64ef3;
+                            stroke: #5ad7f7;
+                        
+                        }
+                    
+                  }
+            
+
+            </style>
+            <rect id="tao" class="animated2" x="-50%" y="-50%" height="100%" width="100%" fill="#940000"></rect>
+            <polygon class="animated" points="-98,0 0,-98 98,0 0,98" fill="#c62828" stroke="#c30101" stroke-width="2"/>
+            <circle class="animated2" r="1.2cm" fill="#940000" stroke="#d32f2f" stroke-width="1cm" stroke-opacity="0.5"/>
+        </svg>
+
+
+            <div class="card-body">
+              <p class="card-text">This is link to a page about the book of Tao. There is and isn't work to be done. Check it out, it helped allot.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <a href="/webpages/space/tributepage.html" class="btn btn-outline-secondary">View</a>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Working on it</title><rect fill="#55595c" width="100%" height="100%"></rect><text fill="#eceeef" dy=".3em" x="50%" y="50%">Working on it</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Working on it</title><rect fill="#55595c" width="100%" height="100%"></rect><text fill="#eceeef" dy=".3em" x="50%" y="50%">Working on it</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Working on it</title><rect fill="#55595c" width="100%" height="100%"></rect><text fill="#eceeef" dy=".3em" x="50%" y="50%">Working on it</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Working on it</title><rect fill="#55595c" width="100%" height="100%"></rect><text fill="#eceeef" dy=".3em" x="50%" y="50%">Working on it</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Working on it</title><rect fill="#55595c" width="100%" height="100%"></rect><text fill="#eceeef" dy=".3em" x="50%" y="50%">Working on it</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Working on it</title><rect fill="#55595c" width="100%" height="100%"></rect><text fill="#eceeef" dy=".3em" x="50%" y="50%">Working on it</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Working on it</title><rect fill="#55595c" width="100%" height="100%"></rect><text fill="#eceeef" dy=".3em" x="50%" y="50%">Working on it</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
-</body>
+  </div>
+
+</main>
+
+<footer class="text-muted">
+  <div class="container">
+    <p class="float-right">
+      <a href="#">Back to top</a>
+    </p>
+    <p>Album example is © Bootstrap, but please download and customize it for yourself!</p>
+    <p>New to Bootstrap? <a href="https://getbootstrap.com">Visit the homepage</a> or read our <a href="/docs/4.2/getting-started/introduction/">getting started guide</a>.</p>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.2/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-zDnhMsjVZfS3hiP7oCBRmfjkQC4fzxVxFhBx8Hkz2aZX8gEvA/jsP3eXRCvzTofP" crossorigin="anonymous"></script>
+
+</body></html>
