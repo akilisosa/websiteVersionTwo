@@ -9,200 +9,255 @@
     xmlns:xlink="http://www.w3.org/1999/xlink"
     width="500px" height="500px" viewBox="0 0 500 500">
    <title>SVG Navigation Links</title>
-   <defs></defs>
-   <style> 
-        text{
-            font: bold 2em "Palatino Linotype", "Book Antiqua", Palatino, serif;
-            text-anchor:middle;
-            fill:pink;
+   <defs>
+    
+</defs>
+
+<style>
+        #scaleOne {
+                fill:red;
+                animation-name: colorChange;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
         }
 
-        text a:link, text a:visited{
-            text-decoration: underline;
-            fill:pink;
+        @keyframes colorChange{
+                25%{fill:green;}
+                50%{fill:lavender;}
+                75%{fill:blueviolet;}
+                100%{fill:cyan;}
         }
 
-        text a:hover{
-            fill:lightskyblue;
-            
+        #scaleTwo {
+                transform:scale(1);
+                animation-name: makebig;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
         }
-    </style>
-
-   
-   <rect height="100%" width="100%" fill="pink"></rect>
-
-   <!--line that shows up at the end with a delay-->
-   <line x1="200%" y1="50%" x2="300%" y2="50%" style="stroke:rgb(255,0,0);stroke-width:5em">
-
-        <animate id="animation1" attributeType="XML" attributeName="x1" from="200%" to="200%"
-            dur="4s" begin="0;animation2.end"/>
 
 
-        <animate id="animation2" attributeType="XML" attributeName="x1" from="200%" to="-100%"
-            dur="4s"  begin="animation1.end"/>
+        @keyframes makebig{
+                
+                100%{transform:scale(10);}
+        }
+</style>
 
-        <animate attributeType="XML" attributeName="x2" from="300%" to="0%"
-            dur="4s"  begin="animation1.end"/>
+
+<!--background-->
+<rect height="100%" width="100%" fill="grey"></rect>
+
+<rect id="scaleOne" x="40%" y="40%" height="20%" width="20%" z-index="-2" fill="#35af8a">
+        <animate attributeType="XML" attributeName="width" from="20%" to="100%"
+          dur="8s" repeatCount="indefinite"/>
+        <animate attributeType="XML" attributeName="height" from="20%" to="100%"
+          dur="8s" repeatCount="indefinite"/>
+        <animate attributeType="XML" attributeName="y" from="40%" to="0%"
+         dur="8s" repeatCount="indefinite"/>
+         <animate attributeType="XML" attributeName="x" from="40%" to="0%"
+         dur="8s" repeatCount="indefinite"/>
+ 
+    </rect>
+    <g>
+        <rect  x="40%" y="40%" height="20%" width="20%" fill="#35af8a">
+         <animate  attributeType="XML" attributeName="width" from="20%" to="100%"
+          dur="8s" repeatCount="indefinite" begin="2s;op.end+2s"/>
+       <animate  attributeType="XML" attributeName="height" from="20%" to="100%"
+         dur="8s" repeatCount="indefinite" begin="2s;op.end+2s"/>
+       <animate  attributeType="XML" attributeName="y" from="40%" to="0%"
+        dur="8s" repeatCount="indefinite" begin="2s;op.end+2s"/>
+       <animate  attributeType="XML" attributeName="x" from="40%" to="0%"
+       dur="8s" repeatCount="indefinite" begin="2s;op.end+2"/>
+</rect>
+    </g>
+
+
+
+<g>
+    <rect id="scaleOne" x="40%" y="40%" height="20%" width="20%" fill=red>
+     <animate  attributeType="XML" attributeName="width" from="20%" to="100%"
+      dur="8s" repeatCount="indefinite" begin="4s;op.end+4s"/>
+   <animate  attributeType="XML" attributeName="height" from="20%" to="100%"
+     dur="8s" repeatCount="indefinite" begin="4s;op.end+4s"/>
+   <animate  attributeType="XML" attributeName="y" from="40%" to="0%"
+    dur="8s" repeatCount="indefinite" begin="4s;op.end+4s"/>
+   <animate  attributeType="XML" attributeName="x" from="40%" to="0%"
+   dur="8s" repeatCount="indefinite" begin="4s;op.end+4"/>
+</rect>
+</g>
+
+<!--top left-->        
+<rect x="0" y="0" width="20%" height="100%" fill="#00846e">
+        <animate attributeType="XML" attributeName="width" from="0%" to="40%"
+            dur="16s" repeatCount="indefinite"/>
+            <animate attributeType="XML" attributeName="height" from="0%" to="60%"
+            dur="16s" repeatCount="indefinite"/>
+    </rect>
+<!--top right-->
+<rect x="100%" y="0" width="60%" height="40%" fill="#00846e">
+        <animate attributeType="XML" attributeName="x" from="100%" to="40%"
+            dur="16s" repeatCount="indefinite"/>
+            <animate attributeType="XML" attributeName="height" from="0%" to="40%"
+            dur="16s" repeatCount="indefinite"/>
+    </rect>
+
+<!--bottom right-->
+    <rect x="100%" y="100%" width="40%" height="60%" fill="#00846e">
+            <animate attributeType="XML" attributeName="x" from="100%" to="60%"
+                dur="16s" repeatCount="indefinite"/>
+                <animate attributeType="XML" attributeName="y" from="100%" to="40%"
+                dur="16s" repeatCount="indefinite"/>
+        </rect>
+<!--bottom left-->
+        <rect x="0%" y="100%" width="60%" height="40%" fill="#00846e">
+                <animate attributeType="XML" attributeName="width" from="0%" to="60%"
+                    dur="16s" repeatCount="indefinite"/>
+                    <animate attributeType="XML" attributeName="y" from="100%" to="60%"
+                    dur="16s" repeatCount="indefinite"/>
+            </rect>
+
+        
+            <!-- middle part going out-->
+          
+        
+        
+        <g>
+                <rect  x="40%" y="40%" height="20%" width="20%" fill="#4d6e81">
+                 <animate  attributeType="XML" attributeName="width" from="20%" to="100%"
+                  dur="8s" repeatCount="indefinite" begin="6s;op.end+6s"/>
+               <animate  attributeType="XML" attributeName="height" from="20%" to="100%"
+                 dur="8s" repeatCount="indefinite" begin="6s;op.end+6s"/>
+               <animate  attributeType="XML" attributeName="y" from="40%" to="0%"
+                dur="8s" repeatCount="indefinite" begin="6s;op.end+6s"/>
+               <animate  attributeType="XML" attributeName="x" from="40%" to="0%"
+               dur="8s" repeatCount="indefinite" begin="6s;op.end+6"/>
+        </rect>
+            </g>
+
+
+<!--
+                <animate id="animation3" attributeType="XML" attributeName="width" from="0%" to="0%"
+                  dur="4s" begin="0,animation4.end"/>
+
+                <animate id="animation4" attributeType="XML" attributeName="width" from="20%" to="100%"
+                  dur="8s" begin="animation3.end"/>
+                <animate attributeType="XML" attributeName="height" from="20%" to="100%"
+                  dur="8s" begin="animation3.end"/>
+                <animate attributeType="XML" attributeName="y" from="40%" to="0%"
+                 dur="8s" begin="animation3.end"/>
+                 <animate attributeType="XML" attributeName="x" from="40%" to="0%"
+                 dur="8s" begin="animation3.end"/>
+-->    
+
+
+
+<!---->
+
+
+
+<g class="slowRects" >
+
+
+<!--top left-->
+<rect x="0" y="0" width="40%" height="60%" fill="#00d2da">
+        <animate attributeType="XML" attributeName="width" from="0%" to="60%"
+            dur="12s" repeatCount="indefinite"/>
+            <animate attributeType="XML" attributeName="height" from="0%" to="40%"
+            dur="12s" repeatCount="indefinite"/>
+    </rect>
+<!--top right-->
+<rect x="100%" y="0" width="40%" height="60%" fill="#00d2da">
+        <animate attributeType="XML" attributeName="x" from="100%" to="60%"
+            dur="12s" repeatCount="indefinite"/>
+            <animate attributeType="XML" attributeName="height" from="0%" to="60%"
+            dur="12s" repeatCount="indefinite"/>
+    </rect>
+
+<!--bottom right-->
+    <rect x="100%" y="100%" width="60%" height="40%" fill="#00d2da">
+            <animate attributeType="XML" attributeName="x" from="100%" to="40%"
+                dur="12s" repeatCount="indefinite"/>
+                <animate attributeType="XML" attributeName="y" from="100%" to="60%"
+                dur="12s" repeatCount="indefinite"/>
+        </rect>
+<!--bottom left-->
+        <rect x="0%" y="100%" width="40%" height="60%" fill="#00d2da">
+                <animate attributeType="XML" attributeName="width" from="0%" to="40%"
+                    dur="12s" repeatCount="indefinite"/>
+                    <animate attributeType="XML" attributeName="y" from="100%" to="40%"
+                    dur="12s" repeatCount="indefinite"/>
+            </rect>
+        </g>
+<!--
+            <path d="M 250,200 300,250 250,300 z" fill=green>
+                    <animate attributeType="XML" attributeName="d" 
+                    
+                    from="M 250,200 300,250 250,300 z"
+                    to="M 500,200 550,250 500,300 z"
+                    dur="4s" repeatCount="indefinite"/>
+
+            </path>
+            <path d="M 250,200 200,250 250,300 z" fill=green></path>
+
+            <path d="M 200,250 250,200 300,250 z" fill=green></path>
+            <path d="M 200,250 250,300 300,250 z" fill=green></path>
+
+        -->
+
+ 
+<!--top left -->
+
+<rect x="0" y="0" width="20%" height="100%" fill="#FFBCB3">
+        <animate attributeType="XML" attributeName="width" from="0%" to="20%"
+            dur="6s" repeatCount="indefinite"/>
+            <animate attributeType="XML" attributeName="height" from="0%" to="20%"
+            dur="6s" repeatCount="indefinite"/>
+            
+            <animate attributeType="XML" attributeName="x" from="0%" to="20%"
+            dur="6s" repeatCount="indefinite"/>
+            <animate attributeType="XML" attributeName="y" from="0%" to="40%"
+            dur="6s" repeatCount="indefinite"/>
+
+    </rect>
+<!--top right-->
+<rect x="100%" y="0" width="60%" height="40%" fill="#FFBCB3">
+        <animate attributeType="XML" attributeName="width" from="0%" to="20%"
+            dur="6s" repeatCount="indefinite"/>
+            <animate attributeType="XML" attributeName="height" from="0%" to="20%"
+            dur="6s" repeatCount="indefinite"/>
+            
+            <animate attributeType="XML" attributeName="x" from="100%" to="40%"
+            dur="6s" repeatCount="indefinite"/>
+            <animate attributeType="XML" attributeName="y" from="0%" to="20%"
+            dur="6s" repeatCount="indefinite"/>
+    </rect>
+
+<!--bottom right-->
+    <rect x="100%" y="100%" width="40%" height="60%" fill="#FFBCB3">
+        <animate attributeType="XML" attributeName="width" from="0%" to="20%"
+        dur="6s" repeatCount="indefinite"/>
+        <animate attributeType="XML" attributeName="height" from="0%" to="20%"
+        dur="6s" repeatCount="indefinite"/>
+        
+        <animate attributeType="XML" attributeName="x" from="100%" to="60%"
+        dur="6s" repeatCount="indefinite"/>
+        <animate attributeType="XML" attributeName="y" from="100%" to="40%"
+        dur="6s" repeatCount="indefinite"/>
+        </rect>
+<!--bottom left-->
+        <rect x="0%" y="100%" width="60%" height="40%" fill="#FFBCB3">
+                <animate attributeType="XML" attributeName="width" from="0%" to="20%"
+        dur="6s" repeatCount="indefinite"/>
+        <animate attributeType="XML" attributeName="height" from="0%" to="20%"
+        dur="6s" repeatCount="indefinite"/>
+        
+        <animate attributeType="XML" attributeName="x" from="0%" to="40%"
+        dur="6s" repeatCount="indefinite"/>
+        <animate attributeType="XML" attributeName="y" from="100%" to="60%"
+        dur="6s" repeatCount="indefinite"/>
+            </rect>
+
+
     
-    </line>
-
-    <text x="50%" y="52%" role="heading"><a xlink:href="/animationportfolio.html">Check out our portfolio!</a></text>
-
-
-   <!--middle line-->
-   <!-- right to left-->
-   <line x1="10%" y1="0" x2="20%" y2="10%" style="stroke:#cd004d;stroke-width:5em">
-
-   
-        <animate attributeType="XML" attributeName="x1" from="100%" to="-50%"
-            dur="8s" repeatCount="indefinite" begin="0"/>
-        
-        <animate attributeType="XML" attributeName="y1" from="0%" to="150%"
-        dur="8s" repeatCount="indefinite" begin="0"/>
-
-        <animate attributeType="XML" attributeName="x2" from="150%" to="0%"
-            dur="8s" repeatCount="indefinite" begin="0"/>
-        
-        <animate attributeType="XML" attributeName="y2" from="-50%" to="100%"
-        dur="8s" repeatCount="indefinite" begin="0"/>
-
-
-    
-    
-    </line>
-
-    <!--line above middle line-->
-    <!--left to right-->
-
-    <line x1="10%" y1="0" x2="20%" y2="10%" style="stroke:#6460ac;stroke-width:5em">
-
-            <animate attributeType="XML" attributeName="x1" from="-80%" to="70%"
-            dur="8s" repeatCount="indefinite" begin="0"/>
-        
-        <animate attributeType="XML" attributeName="y1" from="150%" to="0%"
-        dur="8s" repeatCount="indefinite" begin="0"/>
-
-        <animate attributeType="XML" attributeName="x2" from="-30%" to="120%"
-            dur="8s" repeatCount="indefinite" begin="0"/>
-        
-        <animate attributeType="XML" attributeName="y2" from="100%" to="-50%"
-        dur="8s" repeatCount="indefinite" begin="0"/>
-
-        
-        
-        </line>
-
-         <!--line above middle line line-->
-         <!--right to left -->
-
-    <line x1="10%" y1="0" x2="20%" y2="10%" style="stroke:#008ad2;stroke-width:5em">
-
-            <animate attributeType="XML" attributeName="x1" from="40%" to="-110%"
-            dur="8s" repeatCount="indefinite" begin="0"/>
-        
-        <animate attributeType="XML" attributeName="y1" from="0%" to="150%"
-        dur="8s" repeatCount="indefinite" begin="0"/>
-
-        <animate attributeType="XML" attributeName="x2" from="90%" to="-60%"
-            dur="8s" repeatCount="indefinite" begin="0"/>
-        
-        <animate attributeType="XML" attributeName="y2" from="-50%" to="100%"
-        dur="8s" repeatCount="indefinite" begin="0"/>
-
-        
-        
-        </line>
-
-            <!--line above middle line line line-->
-            <!--left to right-->
-
-    <line x1="10%" y1="0" x2="20%" y2="10%" style="stroke:#0cb14b;stroke-width:5em">
-
-            <animate attributeType="XML" attributeName="x1" from="-140%" to="10"
-            dur="8s" repeatCount="indefinite" begin="0"/>
-        
-        <animate attributeType="XML" attributeName="y1" from="150%" to="0%"
-        dur="8s" repeatCount="indefinite" begin="0"/>
-
-        <animate attributeType="XML" attributeName="x2" from="-90%" to="60%"
-            dur="8s" repeatCount="indefinite" begin="0"/>
-        
-        <animate attributeType="XML" attributeName="y2" from="100%" to="-50%"
-        dur="8s" repeatCount="indefinite" begin="0"/>
-
-        
-        
-        </line>
-
-
-
-<!--line below middle line-->
-<!--line right to left-->
-        <line x1="10%" y1="0" x2="20%" y2="10%" style="stroke:#f37020;stroke-width:5em">
-
-   
-                <animate attributeType="XML" attributeName="x1" from="-50%" to="100%"
-                    dur="8s" repeatCount="indefinite" begin="0"/>
-                
-                <animate attributeType="XML" attributeName="y1" from="180%" to="30%"
-                dur="8s" repeatCount="indefinite" begin="0"/>
-        
-                <animate attributeType="XML" attributeName="x2" from="0%" to="150%"
-                    dur="8s" repeatCount="indefinite" begin="0"/>
-                
-                <animate attributeType="XML" attributeName="y2" from="130%" to="-20%"
-                dur="8s" repeatCount="indefinite" begin="0"/>
-        
-        
-            
-            
-            </line>
-<!--line below middle line line-->
-            <line x1="10%" y1="0" x2="20%" y2="10%" style="stroke:#fcb712;stroke-width:5em">
-
-   
-                    <animate attributeType="XML" attributeName="x1" from="100%" to="-50%"
-                        dur="8s" repeatCount="indefinite" begin="0"/>
-                    
-                    <animate attributeType="XML" attributeName="y1" from="60%" to="210%"
-                    dur="8s" repeatCount="indefinite" begin="0"/>
-            
-                    <animate attributeType="XML" attributeName="x2" from="150%" to="0%"
-                        dur="8s" repeatCount="indefinite" begin="0"/>
-                    
-                    <animate attributeType="XML" attributeName="y2" from="10%" to="160%"
-                    dur="8s" repeatCount="indefinite" begin="0"/>
-            
-            
-                
-                
-                </line>
-<!--line below middle line line line-->
-                <line x1="10%" y1="0" x2="20%" y2="10%" style="stroke:#fedb89;stroke-width:5em">
-
-   
-                        <animate attributeType="XML" attributeName="x1" from="-50%" to="100%"
-                            dur="8s" repeatCount="indefinite" begin="0"/>
-                        
-                        <animate attributeType="XML" attributeName="y1" from="240%" to="90%"
-                        dur="8s" repeatCount="indefinite" begin="0"/>
-                
-                        <animate attributeType="XML" attributeName="x2" from="0%" to="150%"
-                            dur="8s" repeatCount="indefinite" begin="0"/>
-                        
-                        <animate attributeType="XML" attributeName="y2" from="190%" to="40%"
-                        dur="8s" repeatCount="indefinite" begin="0"/>
-                
-                
-                    
-                    
-                    </line>
-
-                   
-
-
-
-
 </svg>
 
 
