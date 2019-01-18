@@ -1,24 +1,72 @@
-<html><head></head>
+<html>
+    <head></head>
 
 <body>
 
 
     <svg class="bd-placeholder-img card-img-top" width="100%" height="225" 
-     viewbox="0 -80 502 160"
+     viewbox="10 -80 502 160"
     xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" 
     focusable="false" role="img" aria-label="Placeholder: Thumbnail">
     
 
-        <title>Motion on a Path, with &lt;animateMotion&gt;</title>
+        <title>Contact Us!</title>
+
+        <style>
+                #contactbackground{
+                
+                    animation-name:blues;
+                    animation-duration: 8s;
+                    animation-iteration-count: infinite;
+                    animation-fill-mode: forwards;
+                }
+                @keyframes blues{
+               
+                    33%{fill:#6e0516}
+                    66%{fill:#f20114}
+                    100%{fill:#29ddec}
+                }
+    
+    
+                #waves{
+                    
+                    animation-name:redz;
+                    animation-duration: 8s;
+                    animation-iteration-count: infinite;
+                    animation-fill-mode: forwards;
+                }
+                @keyframes redz{
+               
+                    50%{fill:#29ddec}
+                    100%{fill:#0089a6}
+                    100%{fill:#6e0516}
+
+                }
+        </style>
+
         <defs>
-            <polygon id="bead" points="-8,0 0,-8 8,0 0,8" stroke-width="2"></polygon>                       <!--1-->
-            <!--The objects that we're going to move along the path will be <use> copies of a predefined <polygon> "beads"
-                The polygon is a square centered on teh origin and rotated 
-                so that the corners of the square are positioned on the x and y axes-->
+            <!--one-->
+        <rect id="waves" width="20%" height="98%" fill="#6e0516">
+                <animateMotion dur="6s" repeatDur="indefinite">                      <!--3-->
+                    <!--Each <use> copy of the bead contains an <animateMotion> element that defines a 5-second animation that loops indefinitley. 
+                        By default the animation duration will be the same time it takes to coplete a full loop 
+                    of the path. The rotate attribute tells our beads to rotate to match the path.-->
+    
+                    <mpath xlink:href="#track"></mpath>                   <!--4-->
+                        <!--The path element is referenced from the <mpath> elment within the <animateMotion>-->
+    
+                </animateMotion>
+    <!--
+                <animate attributeType="XML" attributeName="width"             
+                        from="0%" to="20%" to
+                            dur="6s" repeatCount="indefinite"/>
+    -->
+            </rect>
+     
         </defs>
 
-        <rect height="100%" width="100%" fill="gray"/>
-        <path id="track" fill="none" stroke="dimGray" d="M 0.000000,80.000000
+        <rect id="contactBackground" height="100%" width="110%" y="-80" fill="#29ddec" />
+        <path id="track" fill="none" d="M 0.000000,80.000000
         C 12.31584,   80           24.36792,  77.15576     36.45336,     71.83744             
         C 50.22568,   65.77672     63.62736,  56.68536     76.93544,     45.77056             
         C 93.38056,   32.28288     109.51536, 16.1484      125.66368,   -0.000000             
@@ -109,8 +157,9 @@
             infinity symbol. The path is drawn visibily in the SVG, with a thin gray stroke.
             -->
 
-        <rect  width="20%" height="100%" fill="purple">
-            <animateMotion dur="5s" repeatDur="indefinite">                      <!--3-->
+<!--one-->
+        <rect  id="waves" width="20%" height="98%" fill="#6e0516">
+            <animateMotion dur="6s" repeatDur="indefinite">                      <!--3-->
                 <!--Each <use> copy of the bead contains an <animateMotion> element that defines a 5-second animation that loops indefinitley. 
                     By default the animation duration will be the same time it takes to coplete a full loop 
                 of the path. The rotate attribute tells our beads to rotate to match the path.-->
@@ -119,92 +168,108 @@
                     <!--The path element is referenced from the <mpath> elment within the <animateMotion>-->
 
             </animateMotion>
+<!--
+            <animate attributeType="XML" attributeName="width"             
+                    from="0%" to="20%" to
+                        dur="6s" repeatCount="indefinite"/>
+-->
+        </rect>
+ 
+
+<!--three-->
+
+<rect id="waves" width="20%" height="98%" fill="#6e0516">
+    <animateMotion dur="6s" repeatDur="indefinite"begin="-2s">                    
+        <mpath xlink:href="#track"></mpath>           
+    </animateMotion>
+
+<!--
+    <animate attributeType="XML" attributeName="width"             
+    from="0%" to="18%" to
+        dur="6s" repeatCount="indefinite" begin="-2s"/>
+-->  
+</rect>
+
+
+<!--five-->
+<rect  id="waves" width="20%" height="98%" fill="#6e0516">
+    <animateMotion dur="6s" repeatDur="indefinite" begin="-4s">                   
+        <mpath xlink:href="#track"></mpath>                   <!--4-->
+            <!--The path element is referenced from the <mpath> elment within the <animateMotion>-->
+
+    </animateMotion>
+<!--
+    <animate attributeType="XML" attributeName="width"             
+    from="0%" to="18%" to
+        dur="6s" repeatCount="indefinite" begin="-3s"/>
+-->
+</rect>
+
+
+
+<!--text-->
+            <text x="70%" y="22" id="services" text-anchor="middle" fill="purple" font-size="2em" 
+            font-family="fantasy" role="heading"><a xlink:href="/webpages/space/Services.html">Submit!</a></text>
+   
+<!--two-->
+<rect id="waves" width="20%" height="98%" fill="#6e0516">
+    <animateMotion dur="6s" repeatDur="indefinite" begin="-1s">                      
+        <mpath xlink:href="#track"></mpath>                   
+    </animateMotion>
+<!--
+    <animate attributeType="XML" attributeName="width"             
+        from="0%" to="18%" to
+            dur="6s" repeatCount="indefinite"  begin="-1s" />
+-->
+
         </rect>
 
-        <rect  width="20%" height="100%" fill="green">
-                <animateMotion dur="5s" repeatDur="indefinite" begin="-1s">                      <!--3-->
-                    <!--Each <use> copy of the bead contains an <animateMotion> element that defines a 5-second animation that loops indefinitley. 
-                        By default the animation duration will be the same time it takes to coplete a full loop 
-                    of the path. The rotate attribute tells our beads to rotate to match the path.-->
-    
+
+
+
+
+
+<!--four-->
+                <rect id="waves" width="20%" height="98%" fill="#6e0516">
+                        <animateMotion dur="6s" repeatDur="indefinite" begin="-3">                      <!--3-->
+                            <mpath xlink:href="#track"></mpath>                   
+                        </animateMotion>
+<!--
+                        <animate attributeType="XML" attributeName="width"             
+                        from="0%" to="18%" to
+                            dur="6s" repeatCount="indefinite" begin="-3s"/>
+
+-->
+                
+                    </rect>
+
+
+
+
+
+<!--six-->
+                    <rect id="waves" width="20%" height="98%" fill="#6e0516">
+                <animateMotion dur="6s" repeatDur="indefinite" begin="-5s">                   
                     <mpath xlink:href="#track"></mpath>                   <!--4-->
                         <!--The path element is referenced from the <mpath> elment within the <animateMotion>-->
     
                 </animateMotion>
+
+<!--
+
+                <animate attributeType="XML" attributeName="width"             
+                from="0%" to="18%" to
+                    dur="6s" repeatCount="indefinite" begin="-3s"/>
+
+-->
+        
             </rect>
 
-            <rect  width="20%" height="100%" fill="red">
-                    <animateMotion dur="5s" repeatDur="indefinite"begin="-2s">                      <!--3-->
-                        <!--Each <use> copy of the bead contains an <animateMotion> element that defines a 5-second animation that loops indefinitley. 
-                            By default the animation duration will be the same time it takes to coplete a full loop 
-                        of the path. The rotate attribute tells our beads to rotate to match the path.-->
-        
-                        <mpath xlink:href="#track"></mpath>                   <!--4-->
-                            <!--The path element is referenced from the <mpath> elment within the <animateMotion>-->
-        
-                    </animateMotion>
-                </rect>
-
-                <rect  width="20%" height="100%" fill="purple">
-                        <animateMotion dur="5s" repeatDur="indefinite" begin="-3">                      <!--3-->
-                            <!--Each <use> copy of the bead contains an <animateMotion> element that defines a 5-second animation that loops indefinitley. 
-                                By default the animation duration will be the same time it takes to coplete a full loop 
-                            of the path. The rotate attribute tells our beads to rotate to match the path.-->
             
-                            <mpath xlink:href="#track"></mpath>                   <!--4-->
-                                <!--The path element is referenced from the <mpath> elment within the <animateMotion>-->
-            
-                        </animateMotion>
-                    </rect>
-            
-                    <rect width="20%" height="100%" fill="green">
-                            <animateMotion dur="5s" repeatDur="indefinite" begin="-4s">                      <!--3-->
-                                <!--Each <use> copy of the bead contains an <animateMotion> element that defines a 5-second animation that loops indefinitley. 
-                                    By default the animation duration will be the same time it takes to coplete a full loop 
-                                of the path. The rotate attribute tells our beads to rotate to match the path.-->
-                
-                                <mpath xlink:href="#track"></mpath>                   <!--4-->
-                                    <!--The path element is referenced from the <mpath> elment within the <animateMotion>-->
-                
-                            </animateMotion>
-                        </rect>
-            
-                        <rect width="20%" height="100%" fill="red">
-                                <animateMotion dur="5s" repeatDur="indefinite"begin="-5s">                      <!--3-->
-                                    <!--Each <use> copy of the bead contains an <animateMotion> element that defines a 5-second animation that loops indefinitley. 
-                                        By default the animation duration will be the same time it takes to coplete a full loop 
-                                    of the path. The rotate attribute tells our beads to rotate to match the path.-->
-                    
-                                    <mpath xlink:href="#track"></mpath>                   <!--4-->
-                                        <!--The path element is referenced from the <mpath> elment within the <animateMotion>-->
-                    
-                                </animateMotion>
-                            </rect>
 
 
-        <use xlink:href="#bead" fill="gold" stroke="tomato">
-            <animateMotion dur="5s" repeatDur="indefinite" rotate="auto" begin="-1s">          <!--5-->
-                <!--the subsequent beads are similar, except for different colors on the <use>,
-                    and a different begin value on the animation element. just like with css animations, 
-                    negative start times can be used to start an animatoin partway through its cycle.-->
-                <mpath xlink:href="#track"></mpath>
-            </animateMotion>
-        </use>
-        <use xlink:href="#bead" fill="springGreen" stroke="seaGreen">
-            <animateMotion dur="5s" repeatDur="indefinite" rotate="auto" begin="-2s">
-                <mpath xlink:href="#track"></mpath>
-            </animateMotion>
-        </use>
-        <use xlink:href="#bead" fill="skyBlue" stroke="mediumBlue">
-            <animateMotion dur="5s" repeatDur="indefinite" rotate="auto" begin="-3s">
-                <mpath xlink:href="#track"></mpath>
-            </animateMotion>
-        </use>
-        <use xlink:href="#bead" fill="indianRed" stroke="firebrick">
-            <animateMotion dur="5s" repeatDur="indefinite" rotate="auto" begin="-4s">
-                <mpath xlink:href="#track"></mpath>
-            </animateMotion>
-        </use>
+
+
     </svg>
 
 
