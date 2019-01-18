@@ -1,0 +1,217 @@
+<html><head></head>
+
+<body>
+
+
+    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" 
+     viewbox="0 -80 502 160"
+    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" 
+    focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+    
+
+        <title>Motion on a Path, with &lt;animateMotion&gt;</title>
+        <defs>
+            <polygon id="bead" points="-8,0 0,-8 8,0 0,8" stroke-width="2"></polygon>                       <!--1-->
+            <!--The objects that we're going to move along the path will be <use> copies of a predefined <polygon> "beads"
+                The polygon is a square centered on teh origin and rotated 
+                so that the corners of the square are positioned on the x and y axes-->
+        </defs>
+
+        <rect height="100%" width="100%" fill="gray"/>
+        <path id="track" fill="none" stroke="dimGray" d="M 0.000000,80.000000
+        C 12.31584,   80           24.36792,  77.15576     36.45336,     71.83744             
+        C 50.22568,   65.77672     63.62736,  56.68536     76.93544,     45.77056             
+        C 93.38056,   32.28288     109.51536, 16.1484      125.66368,   -0.000000             
+        C 141.81216, -16.1484      157.94696,-32.28304     174.39208,     -45.77056             
+        C 187.70016, -56.68544     201.10184,-65.7768      214.87416,    -71.8144             
+        C 226.95952, -77.15576     239.0116, -80           251.32744,    -80.00000            
+        C 263.64144, -80           275.69176,-77.15564     287.77536,    -71.83976             
+        C 301.5512,  -65.77848     314.956,  -56.68472     328.2672,     -45.77696             
+        C 344.71088, -32.28008     360.84416,-16.14696     376.99112,    -0.000000             
+        C 392.993944, 16.14832     409.27416, 32.2828      425.71928,     45.77048            
+        C 439.02736,  56.68528     452.42912, 65.77672     466.20152,     71.8144             
+        C 478.92496,  77.15576     490.33896, 80           502.6548,      80.00000">         <!--2-->
+
+
+        <animate   id="cosine2" 
+        begin="0;cosine1.end" dur="5s"
+        attributeType="XML" attributeName="d" from="M 0.000000,80.000000
+        C 12.31584,   80           24.36792,  77.15576     36.45336,     71.83744             
+        C 50.22568,   65.77672     63.62736,  56.68536     76.93544,     45.77056             
+        C 93.38056,   32.28288     109.51536, 16.1484      125.66368,   -0.000000             
+        C 141.81216, -16.1484      157.94696,-32.28304     174.39208,     -45.77056             
+        C 187.70016, -56.68544     201.10184,-65.7768      214.87416,    -71.8144             
+        C 226.95952, -77.15576     239.0116, -80           251.32744,    -80.00000            
+        C 263.64144, -80           275.69176,-77.15564     287.77536,    -71.83976             
+        C 301.5512,  -65.77848     314.956,  -56.68472     328.2672,     -45.77696             
+        C 344.71088, -32.28008     360.84416,-16.14696     376.99112,    -0.000000             
+        C 392.993944, 16.14832     409.27416, 32.2828      425.71928,     45.77048            
+        C 439.02736,  56.68528     452.42912, 65.77672     466.20152,     71.8144             
+        C 478.92496,  77.15576     490.33896, 80           502.6548,      80.00000" 
+        
+        to="M 0.000000,-80.000000
+        C 12.31584,  -80           24.36792,  -77.15576     36.45336,     -71.83744             
+        C 50.22568,  -65.77672     63.62736,  -56.68536     76.93544,     -45.77056             
+        C 93.38056,  -32.28288     109.51536, -16.1484      125.66368,   -0.000000             
+        C 141.81216,  16.1484      157.94696,  32.28304     174.39208,     45.77056             
+        C 187.70016,  56.68544     201.10184,  65.7768      214.87416,     71.8144             
+        C 226.95952,  77.15576     239.0116,   80           251.32744,     80.00000            
+        C 263.64144,  80           275.69176,  77.15564     287.77536,     71.83976             
+        C 301.5512,   65.77848     314.956,    56.68472     328.2672,      45.77696             
+        C 344.71088,  32.28008     360.84416,  16.14696     376.99112,     0.000000             
+        C 392.993944,-16.14832     409.27416, -32.2828      425.71928,    -45.77048            
+        C 439.02736, -56.68528     452.42912, -65.77672     466.20152,    -71.8144             
+        C 478.92496, -77.15576     490.33896, -80           502.6548,     -80.00000"></animate>
+
+        <animate id="cosine1" 
+        begin="cosine2.end" dur="5s"
+        attributeType="XML" attributeName="d" 
+        
+        from=
+        "M 0.000000,-80.000000
+                   C 12.31584,  -80           24.36792,  -77.15576     36.45336,     -71.83744             
+                   C 50.22568,  -65.77672     63.62736,  -56.68536     76.93544,     -45.77056             
+                   C 93.38056,  -32.28288     109.51536, -16.1484      125.66368,   -0.000000             
+                   C 141.81216,  16.1484      157.94696,  32.28304     174.39208,     45.77056             
+                   C 187.70016,  56.68544     201.10184,  65.7768      214.87416,     71.8144             
+                   C 226.95952,  77.15576     239.0116,   80           251.32744,     80.00000            
+                   C 263.64144,  80           275.69176,  77.15564     287.77536,     71.83976             
+                   C 301.5512,   65.77848     314.956,    56.68472     328.2672,      45.77696             
+                   C 344.71088,  32.28008     360.84416,  16.14696     376.99112,     0.000000             
+                   C 392.993944,-16.14832     409.27416, -32.2828      425.71928,    -45.77048            
+                   C 439.02736, -56.68528     452.42912, -65.77672     466.20152,    -71.8144             
+                   C 478.92496, -77.15576     490.33896, -80           502.6548,     -80.00000"
+        
+        
+     
+
+        to= 
+
+        "M 0.000000,80.000000
+        C 12.31584,   80           24.36792,  77.15576     36.45336,     71.83744             
+        C 50.22568,   65.77672     63.62736,  56.68536     76.93544,     45.77056             
+        C 93.38056,   32.28288     109.51536, 16.1484      125.66368,   -0.000000             
+        C 141.81216, -16.1484      157.94696,-32.28304     174.39208,     -45.77056             
+        C 187.70016, -56.68544     201.10184,-65.7768      214.87416,    -71.8144             
+        C 226.95952, -77.15576     239.0116, -80           251.32744,    -80.00000            
+        C 263.64144, -80           275.69176,-77.15564     287.77536,    -71.83976             
+        C 301.5512,  -65.77848     314.956,  -56.68472     328.2672,     -45.77696             
+        C 344.71088, -32.28008     360.84416,-16.14696     376.99112,    -0.000000             
+        C 392.993944, 16.14832     409.27416, 32.2828      425.71928,     45.77048            
+        C 439.02736,  56.68528     452.42912, 65.77672     466.20152,     71.8144             
+        C 478.92496,  77.15576     490.33896, 80           502.6548,      80.00000">
+      </animate>
+
+    </path>
+            <!--The path (which we'll move the bead along) consists of two
+            teardrop-shaped cubic bezier curve segments on either side of the 
+            center point. The result is a sideways figure 8, otherwise known as an
+            infinity symbol. The path is drawn visibily in the SVG, with a thin gray stroke.
+            -->
+
+        <rect  width="20%" height="100%" fill="purple">
+            <animateMotion dur="5s" repeatDur="indefinite">                      <!--3-->
+                <!--Each <use> copy of the bead contains an <animateMotion> element that defines a 5-second animation that loops indefinitley. 
+                    By default the animation duration will be the same time it takes to coplete a full loop 
+                of the path. The rotate attribute tells our beads to rotate to match the path.-->
+
+                <mpath xlink:href="#track"></mpath>                   <!--4-->
+                    <!--The path element is referenced from the <mpath> elment within the <animateMotion>-->
+
+            </animateMotion>
+        </rect>
+
+        <rect  width="20%" height="100%" fill="green">
+                <animateMotion dur="5s" repeatDur="indefinite" begin="-1s">                      <!--3-->
+                    <!--Each <use> copy of the bead contains an <animateMotion> element that defines a 5-second animation that loops indefinitley. 
+                        By default the animation duration will be the same time it takes to coplete a full loop 
+                    of the path. The rotate attribute tells our beads to rotate to match the path.-->
+    
+                    <mpath xlink:href="#track"></mpath>                   <!--4-->
+                        <!--The path element is referenced from the <mpath> elment within the <animateMotion>-->
+    
+                </animateMotion>
+            </rect>
+
+            <rect  width="20%" height="100%" fill="red">
+                    <animateMotion dur="5s" repeatDur="indefinite"begin="-2s">                      <!--3-->
+                        <!--Each <use> copy of the bead contains an <animateMotion> element that defines a 5-second animation that loops indefinitley. 
+                            By default the animation duration will be the same time it takes to coplete a full loop 
+                        of the path. The rotate attribute tells our beads to rotate to match the path.-->
+        
+                        <mpath xlink:href="#track"></mpath>                   <!--4-->
+                            <!--The path element is referenced from the <mpath> elment within the <animateMotion>-->
+        
+                    </animateMotion>
+                </rect>
+
+                <rect  width="20%" height="100%" fill="purple">
+                        <animateMotion dur="5s" repeatDur="indefinite" begin="-3">                      <!--3-->
+                            <!--Each <use> copy of the bead contains an <animateMotion> element that defines a 5-second animation that loops indefinitley. 
+                                By default the animation duration will be the same time it takes to coplete a full loop 
+                            of the path. The rotate attribute tells our beads to rotate to match the path.-->
+            
+                            <mpath xlink:href="#track"></mpath>                   <!--4-->
+                                <!--The path element is referenced from the <mpath> elment within the <animateMotion>-->
+            
+                        </animateMotion>
+                    </rect>
+            
+                    <rect width="20%" height="100%" fill="green">
+                            <animateMotion dur="5s" repeatDur="indefinite" begin="-4s">                      <!--3-->
+                                <!--Each <use> copy of the bead contains an <animateMotion> element that defines a 5-second animation that loops indefinitley. 
+                                    By default the animation duration will be the same time it takes to coplete a full loop 
+                                of the path. The rotate attribute tells our beads to rotate to match the path.-->
+                
+                                <mpath xlink:href="#track"></mpath>                   <!--4-->
+                                    <!--The path element is referenced from the <mpath> elment within the <animateMotion>-->
+                
+                            </animateMotion>
+                        </rect>
+            
+                        <rect width="20%" height="100%" fill="red">
+                                <animateMotion dur="5s" repeatDur="indefinite"begin="-5s">                      <!--3-->
+                                    <!--Each <use> copy of the bead contains an <animateMotion> element that defines a 5-second animation that loops indefinitley. 
+                                        By default the animation duration will be the same time it takes to coplete a full loop 
+                                    of the path. The rotate attribute tells our beads to rotate to match the path.-->
+                    
+                                    <mpath xlink:href="#track"></mpath>                   <!--4-->
+                                        <!--The path element is referenced from the <mpath> elment within the <animateMotion>-->
+                    
+                                </animateMotion>
+                            </rect>
+
+
+        <use xlink:href="#bead" fill="gold" stroke="tomato">
+            <animateMotion dur="5s" repeatDur="indefinite" rotate="auto" begin="-1s">          <!--5-->
+                <!--the subsequent beads are similar, except for different colors on the <use>,
+                    and a different begin value on the animation element. just like with css animations, 
+                    negative start times can be used to start an animatoin partway through its cycle.-->
+                <mpath xlink:href="#track"></mpath>
+            </animateMotion>
+        </use>
+        <use xlink:href="#bead" fill="springGreen" stroke="seaGreen">
+            <animateMotion dur="5s" repeatDur="indefinite" rotate="auto" begin="-2s">
+                <mpath xlink:href="#track"></mpath>
+            </animateMotion>
+        </use>
+        <use xlink:href="#bead" fill="skyBlue" stroke="mediumBlue">
+            <animateMotion dur="5s" repeatDur="indefinite" rotate="auto" begin="-3s">
+                <mpath xlink:href="#track"></mpath>
+            </animateMotion>
+        </use>
+        <use xlink:href="#bead" fill="indianRed" stroke="firebrick">
+            <animateMotion dur="5s" repeatDur="indefinite" rotate="auto" begin="-4s">
+                <mpath xlink:href="#track"></mpath>
+            </animateMotion>
+        </use>
+    </svg>
+
+
+           
+
+
+
+
+
+</body></html>
