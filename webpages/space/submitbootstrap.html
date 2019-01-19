@@ -135,7 +135,7 @@ body {
     <div class="container-fluid">
     <form class="form-signin" action="https://formspree.io/akili@sosaanimationstudios.com" method="POST">
   <div class="text-center mb-4" style="margin-top:30px;" >
-    <img class="mb-4"  src="../../images/sosaanimationstudios/logo/sosaanimationstudioslogo.svg" alt="" width="72" height="72">
+    <a href="../spaceship.html"><img class="mb-4"  src="../../images/sosaanimationstudios/logo/sosaanimationstudioslogo.svg" alt="go back?" width="72" height="72"></a>
     <h1 class="h3 mb-3 font-weight-normal">Submit</h1>
     <p>Contact us!</p>
   </div>
@@ -148,13 +148,13 @@ body {
         <div class="input-group-prepend">
           <span class="input-group-text" id="">Prefered Name:</span>
         </div>
-        <input type="text" class="form-control">
+        <input type="text" name="name" class="form-control">
       </div>
     </div>
 
     <!--email-->
   <div class="form-label-group">
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+        <input type="email" id="inputEmail" name="_replyto" class="form-control" placeholder="Email address" required="" autofocus="">
         <label for="inputEmail">Email address</label>
       </div>
 
@@ -162,9 +162,10 @@ body {
 <!--Text area-->
   <div class="input-group">
         <div class="input-group-prepend">
-          <span class="input-group-text">Tell me more</span>
+          <span  class="input-group-text">Tell me more</span>
         </div>
-        <textarea class="form-control" aria-label="With textarea"></textarea>
+        <textarea placeholder="the email and name works, this part doesn't so hit submit and we will start a chain going."
+        class="form-control" aria-label="With textarea"></textarea>
       </div>
 
 
@@ -176,7 +177,7 @@ body {
     </label>
   </div>
 
-  <button class="btn btn-lg btn-primary btn-block" type="submit">Submit!</button>
+  <button class="btn btn-lg btn-primary btn-block" value="Send" type="submit">Submit!</button>
   <p class="mt-5 mb-3 text-muted text-center">you navigated here for a reason. 
     if something doesn't work or there is something you want to see let me know. 
     if you want to donate so I'll have more time to make this better: 
