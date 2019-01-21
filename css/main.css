@@ -7,11 +7,29 @@ main {
 
 }
 
+#headerContainer{
+    
+        float: left;
+        width: 100%;
+        display: block;
+        position: relative;
+        justify-content: right;
+        color:white;
+      
+       
+}
+
 h1 {
     color:white;
-    margin: auto;
-    text-align: center;
+    
+   text-align: right;
     word-wrap: break-word;
+    position: relative;
+        float: center;
+        left: -5%;
+    z-index: 2;
+
+
 }
 
 #backgroundGif{
@@ -20,13 +38,53 @@ h1 {
 
 #spaceship{
     position: absolute;
-    top: 10vw;
+    top: 5vw;
     right: 60vw;
     width: 5vw;
     height: 5vw;
     border: 3px solid #73AD21;
+    animation-name: orbit;
+    animation-duration: 200s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes orbit{
+    0%{
+        top: 5vw;
+        right:60vw;
+    }
+
+    39%{
+        top:12vw;
+        right:120vw;
+    }
+
+    40%{
+        top:-12vw;
+        right:120vw;
+    }
+    41%{
+        top:-12vw;
+        right:-10vw;
+    }
+    45%{
+        top:0vw;
+        right:0vw;
+    }
+    65%{
+        top: 2vw;
+        right:20vw;
+    }
+    100%{
+        top:5vw;
+        right:60vw;
+    }
+
 
 }
+
 
 #gear{
     position: absolute;
